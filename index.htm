@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>U.S. Emission Projections | World 101</title>
+
+		<style type="text/css">
+        <style>
+      #container {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+		</style>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://world101.cfr.org/themes/custom/world101_bootstrap/components/asset-map-chart/chart/vendors/highchart-cfr-theme.js"></script>
+
+<div id="container"></div>
+
+
+
+		<script type="text/javascript">
+
+
+var historical = [
+        [1990,6356],
+        [1991,6300],
+        [1992,6410],
+        [1993,6519],
+        [1994,6611],
+        [1995,6696],
+        [1996,6891],
+        [1997,6952],
+        [1998,7016],
+        [1999,7057],
+        [2000,7217],
+        [2001,7101],
+        [2002,7139],
+        [2003,7181],
+        [2004,7314],
+        [2005,7320],
+        [2006,7252],
+        [2007,7351],
+        [2008,7145],
+        [2009,6698],
+        [2010,6923],
+        [2011,6771],
+        [2012,6529],
+        [2013,6709],
+        [2014,6763],
+        [2015,6638],
+        [2016,6511]
+    ],
+    current = [
+        [2016,6511,6511],
+        [2017,6501,6504],
+        [2018,6607,6623],
+        [2019,6571,6607],
+        [2020,6501,6578],
+        [2021,6437,6537],
+        [2022,6391,6498],
+        [2023,6362,6498],
+        [2024,6369,6515],
+        [2025,6358,6518],
+        [2026,6353,6519],
+        [2027,6343,6518],
+        [2028,6328,6519],
+        [2029,6330,6523],
+        [2030,6326,6522]
+    ],
+    twentytwenty = [
+        [2020,6056,6340]
+    ],
+    ndc = [
+        [2025,5277, 5753]
+    ],
+    obama = [
+		[2025,5753,5753],
+		[2026,5592,5615],
+		[2027,5431,5477],
+		[2028,5270,5339],
+		[2029,5109,5201],
+		[2030,4948,5063],
+        [2031,4787,4925],
+        [2032,4626,4787],
+        [2033,4465,4649],
+        [2034,4304,4511],
+        [2035,4143,4373],
+        [2036,3981,4235],
+        [2037,3820,4097],
+        [2038,3659,3959],
+        [2039,3498,3821],
+        [2040,3337,3683],
+        [2041,3176,3545],
+        [2042,3015,3407],
+        [2043,2854,3269],
+        [2044,2693,3131],
+        [2045,2532,2993],
+        [2046,2371,2855],
+        [2047,2210,2717],
+        [2048,2049,2579],
+        [2049,1888,2441],
+        [2050,1727,2303],
+    ];
+
+
+Highcharts.chart('container', {
+
+    title: {
+        text: ''
+    },
+
+    xAxis: {
+        type: 'linear',
+		title: {
+            text: 'Year'
+        }
+    },
+
+    yAxis: {
+        title: {
+            text: 'Greenhouse gas emissions (millions of metric tons of carbon dioxide equivalent)'
+        }
+    },
+
+    series: [{
+        name: 'Historical emissions, excluding forestry',
+        data: historical,
+        type: 'line',
+    }, {
+        name: 'Current policy projections',
+        data: current,
+        type: 'arearange'
+    }, {
+        name: '2020 pledge',
+        data: twentytwenty,
+        type: 'columnrange'
+    }, {
+        name: 'Nationally Determined Contribution',
+        data: ndc,
+        type: 'columnrange'
+    }, {
+        name: 'Obama Administration Mid-Century Strategy',
+        data: obama,
+        type: 'arearange'
+    }]
+});
+		</script>
+	</body>
+</html>
